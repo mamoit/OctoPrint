@@ -229,7 +229,7 @@ Issue a print head command
    feedrate
      Changes the feedrate factor to apply to the movements of the axes.
 
-     * ``factor``: The new factor, percentage as integer or float (percentage divided by 100) between 50 and 200%.
+     * ``factor``: The new factor, percentage as integer (percentage divided by 100) between 50 and 200%.
 
    All of these commands except ``feedrate`` may only be sent if the printer is currently operational and not printing.
    Otherwise a :http:statuscode:`409` is returned.
@@ -305,7 +305,7 @@ Issue a print head command
    :json number y:       ``jog`` command: The amount to travel on the Y axis in mm.
    :json number z:       ``jog`` command: The amount to travel on the Z axis in mm.
    :json array axes:     ``home`` command: The axes which to home, valid values are one or more of ``x``, ``y`` and ``z``.
-   :json number factor:  ``feedrate`` command: The factor to apply to the feed rate, percentage between 50 and 200% as integer or float.
+   :json number factor:  ``feedrate`` command: The factor to apply to the feed rate, percentage between 50 and 200% as integer.
    :statuscode 204: No error
    :statuscode 400: Invalid axis specified, invalid value for travel amount for a jog command or factor for feed rate or otherwise invalid
                     request.
